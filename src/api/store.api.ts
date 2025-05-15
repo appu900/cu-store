@@ -72,3 +72,9 @@ function fetchStoreByUserID(req: Request, res: Response, next: NextFunction) {
       next(error);
     });
 }
+
+
+
+function handleConnection(){
+  console.log("hello world !")
+}

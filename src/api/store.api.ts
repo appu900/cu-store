@@ -59,7 +59,7 @@ function fetchStoreDetails(req: Request, res: Response, next: NextFunction) {
 
 function fetchStoreByUserID(req: Request, res: Response, next: NextFunction) {
   const authRequest = req as AuthenticatedRequest;
-  const userID = authRequest.userID;
+  const userID = req.params.userID;
   if (!userID) {
     respondWithError(res, 400, "userID is required");
     return;
